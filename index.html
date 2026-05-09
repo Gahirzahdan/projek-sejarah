@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꓄ꋬꍌ! - Eksplorasi Budaya Modern</title>
+    <link rel="stylesheet" href="csss/style.css">
+        <link rel="icon" href="csss/png/Tag2.png">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <main class="hero-section">
+        <div class="modern-card" data-aos="zoom-out">
+            <h1 id="welcome-title">Selamat Datang!</h1>
+            <h3 id="welcome-subtitle">di Website Eksplorasi ꓄ꋬꍌ!(Tubagus , Ari, Gharizah)</h3>
+            <p id="welcome-desc" class="description">
+                Jelajahi narasi visual dan sejarah bangunan bersejarah di Indonesia. Kami menghidupkan kembali kisah Gereja Zebaoth dan Vihara Dhanagun dengan sentuhan modern.
+            </p>
+            
+            <div class="btn-group-modern">
+                <a href="gereja.html" class="btn-modern btn-primary-modern">Gereja Zebaoth</a>
+                <a href="vihara.html" class="btn-modern btn-secondary-modern">Vihara Dhanagun</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-modern">
+        <p>© 2026 ꓄ꋬꍌ! — Menjaga Warisan Melalui Teknologi</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        window.onload = function() {
+            const isReturning = sessionStorage.getItem('isReturning');
+            if (isReturning) {
+                document.getElementById('welcome-title').innerText = "Selamat Kembali!";
+                document.getElementById('welcome-subtitle').innerText = "Senang melihat Anda kembali di ꓄ꋬꍌ!";
+                document.getElementById('welcome-desc').innerHTML = "Lanjutkan perjalanan Anda menelusuri sejarah. Pilih destinasi di bawah untuk melanjutkan eksplorasi budaya Anda.";
+                sessionStorage.removeItem('isReturning');
+            }
+        };
+    </script>
+</body>
+</html>
